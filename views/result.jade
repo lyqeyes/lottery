@@ -1,0 +1,18 @@
+//
+   Created with JetBrains WebStorm.
+   User: LiuDaShuai
+   Date: 13-11-15
+   Time: 下午11:26
+   To change this template use File | Settings | File Templates.
+
+p(id='notice') 翻牌查看结果
+div(id='center')
+    - for(var item in result)
+        div(class='block')
+            img(src='/image/card.png',onclick="this.style.display = 'none'",class='card')
+            p(class='vertical') #{result[item]}
+br
+link(rel='stylesheet',href='/stylesheets/end.css')
+p(id='agin')
+    a(href='/',class='btn btn-lg btn-primary btn-block') 再来一次
+

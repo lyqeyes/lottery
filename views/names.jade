@@ -1,0 +1,26 @@
+//
+   Created with JetBrains WebStorm.
+   User: LiuDaShuai
+   Date: 13-11-14
+   Time: 下午8:48
+   To change this template use File | Settings | File Templates.
+
+  block content
+
+    p 每头狼都得有一个响亮的名字:
+    br
+    form(method='post',action='/result')
+        input(type='hidden',value = targetNum,name='target')
+        script.
+            for(var i = 1; i <= #{all}; i++)
+            {
+                document.write("<img src='/image/tx.png' />");
+                document.write("<input type='text' name='namelist[name"+(i-1)+"]'>");
+                if(i%4 == 0)
+                    document.write("<br />");
+            }
+        br
+        input(type='submit',value=' GO >> ',id='begin',class='btn btn-lg btn-primary btn-block')
+
+    link(rel='stylesheet',href='/stylesheets/names.css')
+
